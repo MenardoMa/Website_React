@@ -1,16 +1,25 @@
+import { Button } from "../Button/Button";
 import "./Navbar.css";
 
 export const Navbar = () => {
+  // Link
+
+  const tabLinks = [
+    "Home",
+    "Program",
+    "About us",
+    "Campus",
+    "Testimonials",
+    <Button href="/">Contact us</Button>,
+  ];
+
   return (
-    <nav>
-      <img src="" alt="Logo" />
+    <nav className="container">
+      <img src="" alt="Logo" className="logo" />
       <ul>
-        <li>Home</li>
-        <li>Program</li>
-        <li>About us</li>
-        <li>Campus</li>
-        <li>Testimonials</li>
-        <li>Contact us</li>
+        {tabLinks.map((link) => (
+          <li key={link}>{link}</li>
+        ))}
       </ul>
     </nav>
   );
