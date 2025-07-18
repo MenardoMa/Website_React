@@ -1,5 +1,6 @@
 import { Button } from "../Button/Button";
 import "./Navbar.css";
+import logo from "../../assets/logo.png";
 
 export const Navbar = () => {
   // Link
@@ -15,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <nav className="container">
-      <img src="" alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo" />
       <ul>
         {tabLinks.map((link) => (
           <li key={link}>{link}</li>
